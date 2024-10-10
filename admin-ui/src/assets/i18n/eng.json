@@ -685,7 +685,7 @@
         "Active":"ACTIVE",
         "InActive":"INACTIVE"
     },
-    "lostRID":{
+   "lostRID":{
         "titleTxt":"Retrieve Lost RID",
         "subtitleenrollment":"Enrollment Details",
         "subtitlelocation":"Location",
@@ -694,7 +694,10 @@
         "name":"Full Name ",
         "applicationId":"Application Id",
         "enrolmentDate":"Enrolment Date",
-        "dateOfBirth":"Date Of Birth"
+        "dateOfBirth":"Date Of Birth",
+        "action":"Action",
+        "registrationDate":"Registration Date",
+        "aid":"AID"
     },
     "generatecsr": {
         "title": "Generate CSR",

@@ -14,15 +14,17 @@ export class ProfileDialogComponent {
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {
     console.log("dataSource", data);
-    if (data.lostData.firstName) {
-      this.name += data.lostData.firstName + " ";
+    const filteredData: { [key: string]: any } = {};
+    for (let key in data.lostData) {
+      if (key !== "dateOfBirth" && key !== "applicantPhoto") {
+        filteredData[key] = data.lostData[key];
+        this.name+=data.lostData[key]+" ";
+          // Store the key-value pairs except dob and photo
+      }
     }
-    if (data.lostData.middleName) {
-      this.name += data.lostData.middleName + " ";
-    }
-    if (data.lostData.lastName) {
-      this.name += data.lostData.lastName;
-    }
+    this.name.trim()
+   
+    
     console.log("name", this.name);
   }
 
